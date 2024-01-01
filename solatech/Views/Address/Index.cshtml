@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Address</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+<div class="container mt-5">
+    <form>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <h4 for="validateAddressInput">1. Validate your address</h4>
+                <input type="text" class="form-control" placeholder="Enter address..." id="validateAddressInput" required>
+                <div class="invalid-feedback">Please provide a valid address.</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <h4 for="addressInput">2. Search for Valid Addresses</h4>
+                <input type="text" class="form-control" placeholder="Enter address..." id="addressInput" required>
+                <div id="addressDropdown" class="dropdown mt-1">
+                    <ul id="addressList" class="dropdown-menu">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="mb-3">
+                <h4 for="zipCode">3. Complete your address by typing your Zip Code</h4>
+                <input type="text" class="form-control" placeholder="Enter zip code..." id="zipCode">
+                <div class="invalid-feedback">Please provide a valid zip code.</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" disabled>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="city">Neighborhood</label>
+                <input type="text" class="form-control" id="neighborhood" disabled>
+            </div>
+        </div>
+    </form>
+</div>
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    @Scripts.Render("~/bundles/functions")
+</body>
+</html>
+
